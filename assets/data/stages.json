@@ -1,0 +1,78 @@
+{
+  "templates": {
+    "e1": {"letters": "star", "words": [
+      {"w": "star", "r": 1, "c": 0, "d": "A"},
+      {"w": "rats", "r": 0, "c": 2, "d": "D"}
+    ]},
+    "e2": {"letters": "note", "words": [
+      {"w": "note", "r": 1, "c": 0, "d": "A"},
+      {"w": "tone", "r": 1, "c": 2, "d": "D"}
+    ]},
+    "e3": {"letters": "lane", "words": [
+      {"w": "lane", "r": 1, "c": 0, "d": "A"},
+      {"w": "lean", "r": 1, "c": 0, "d": "D"}
+    ]},
+    "e4": {"letters": "meat", "words": [
+      {"w": "meat", "r": 1, "c": 0, "d": "A"},
+      {"w": "team", "r": 1, "c": 3, "d": "D"}
+    ]},
+    "m1": {"letters": "tears", "words": [
+      {"w": "star", "r": 2, "c": 0, "d": "A"},
+      {"w": "eats", "r": 0, "c": 1, "d": "D"},
+      {"w": "rest", "r": 2, "c": 3, "d": "D"}
+    ]},
+    "m2": {"letters": "plane", "words": [
+      {"w": "plan", "r": 2, "c": 0, "d": "A"},
+      {"w": "leap", "r": 2, "c": 1, "d": "D"},
+      {"w": "pane", "r": 0, "c": 3, "d": "D"}
+    ]},
+    "m3": {"letters": "stone", "words": [
+      {"w": "stone", "r": 2, "c": 0, "d": "A"},
+      {"w": "tons", "r": 2, "c": 1, "d": "D"},
+      {"w": "note", "r": 2, "c": 3, "d": "D"}
+    ]},
+    "m4": {"letters": "spear", "words": [
+      {"w": "spear", "r": 2, "c": 0, "d": "A"},
+      {"w": "pear", "r": 2, "c": 1, "d": "D"},
+      {"w": "reap", "r": 2, "c": 4, "d": "D"}
+    ]},
+    "h1": {"letters": "master", "words": [
+      {"w": "master", "r": 2, "c": 0, "d": "A"},
+      {"w": "steam", "r": 2, "c": 2, "d": "D"},
+      {"w": "tame", "r": 2, "c": 3, "d": "D"},
+      {"w": "rest", "r": 2, "c": 5, "d": "D"}
+    ]},
+    "h2": {"letters": "garden", "words": [
+      {"w": "garden", "r": 2, "c": 0, "d": "A"},
+      {"w": "grand", "r": 2, "c": 0, "d": "D"},
+      {"w": "dare", "r": 2, "c": 3, "d": "D"},
+      {"w": "near", "r": 2, "c": 5, "d": "D"}
+    ]},
+    "h3": {"letters": "planet", "words": [
+      {"w": "planet", "r": 2, "c": 0, "d": "A"},
+      {"w": "plant", "r": 2, "c": 0, "d": "D"},
+      {"w": "neat", "r": 2, "c": 3, "d": "D"},
+      {"w": "tale", "r": 2, "c": 5, "d": "D"}
+    ]},
+    "h4": {"letters": "silent", "words": [
+      {"w": "silent", "r": 2, "c": 0, "d": "A"},
+      {"w": "listen", "r": 2, "c": 2, "d": "D"},
+      {"w": "nest", "r": 2, "c": 4, "d": "D"},
+      {"w": "tile", "r": 2, "c": 5, "d": "D"}
+    ]}
+  },
+  "cities": {
+    "New York": ["e1", "m1", "h1"],
+    "Rio": ["e2", "m2", "h2"],
+    "London": ["e3", "m3", "h3"],
+    "Paris": ["e4", "m4", "h4"],
+    "Berlin": ["e1", "m2", "h3"],
+    "Cairo": ["e2", "m3", "h4"],
+    "Cape Town": ["e3", "m4", "h1"],
+    "Moscow": ["e4", "m1", "h2"],
+    "Delhi": ["e1", "m3", "h2"],
+    "Beijing": ["e2", "m4", "h1"],
+    "Tokyo": ["e3", "m1", "h4"],
+    "Sydney": ["e4", "m2", "h3"]
+  }
+}

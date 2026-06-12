@@ -1,0 +1,26 @@
+# Builds the Flutter app for web and deploys it to GitLab Pages.
+# Live preview URL (after first successful pipeline):
+#   https://uditkandpal-group.gitlab.io/word_wars/
+
+pages:
+  stage: deploy
+  image: ghcr.io/cirruslabs/flutter:stable
+  script:
+    - flutter config --enable-web --no-analytics
+    # Generate web platform scaffolding if it is not committed
+    - if [ ! -d web ]; then flutter create . --platforms web --project-name word_wars; fi
+    - flutter pub get
+    # Derive the base path from the actual Pages URL so it works both with
+    # unique domains (https://word-wars-xxxx.gitlab.io/) and the classic
+    # namespace path (https://uditkandpal-group.gitlab.io/word_wars/).
+    - BASE_HREF="/$(echo "$CI_PAGES_URL" | cut -d/ -f4- )/"
+    - if [ "$BASE_HREF" = "//" ]; then BASE_HREF="/"; fi
+    - echo "Pages URL=$CI_PAGES_URL base-href=$BASE_HREF"
+    - flutter build web --release --base-href "$BASE_HREF"
+    - rm -rf public
+    - mv build/web public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
