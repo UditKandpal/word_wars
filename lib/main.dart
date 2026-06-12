@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'screens/map_screen.dart';
 import 'services/dictionary_service.dart';
@@ -7,7 +8,7 @@ import 'state/game_state.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // MobileAds.instance.initialize(); // Uncomment once google_mobile_ads is added
+  MobileAds.instance.initialize();
   final dictionary = await DictionaryService.load();
   final stages = await StageService.load();
   runApp(WordWarsApp(dictionary: dictionary, stages: stages));
