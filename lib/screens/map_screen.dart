@@ -28,7 +28,6 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> _attack(GameState game, TerritoryNode n) async {
-    // TODO(ads): show interstitial ad here during map-to-city transition.
     final conquered = await Navigator.push<bool>(
       context,
       MaterialPageRoute(builder: (_) => PuzzleScreen(city: n.name)),

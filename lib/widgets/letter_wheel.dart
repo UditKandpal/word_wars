@@ -97,7 +97,7 @@ class _LetterWheelState extends State<LetterWheel> {
             Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withOpacity(0.05),
+                color: Colors.white.withAlpha(13),
                 border: Border.all(color: Colors.white12),
               ),
             ),

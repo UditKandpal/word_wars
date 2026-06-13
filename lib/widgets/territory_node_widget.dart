@@ -36,7 +36,7 @@ class TerritoryNodeWidget extends StatelessWidget {
             width: attackable ? 2.5 : 1,
           ),
           boxShadow: attackable
-              ? [BoxShadow(color: Colors.amber.withOpacity(0.5), blurRadius: 8)]
+              ? [BoxShadow(color: Colors.amber.withAlpha(128), blurRadius: 8)]
               : null,
         ),
         child: Text(
